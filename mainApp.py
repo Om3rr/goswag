@@ -15,7 +15,7 @@ class Application(tornado.web.Application):
     def __init__(self):
         settings = {
             "debug": True,
-            "static_path": os.path.join(os.path.dirname(__file__), "views")
+            "static_path": os.path.join(os.path.dirname(__file__), "static"),
         }
         handlers = [
             (r"/", MainHandler),
