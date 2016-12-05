@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ static_url("css/main.css") }}">
@@ -25,6 +26,41 @@
 </div>
 
 <div class="pictures">
+    <input class="form-control" id="itemSearch" type="text" placeholder="Enter your item" onkeydown="myscript(value)">
+        <script>
+          function waitForSocketConnection(socket, callback){
+        setTimeout(
+            function(){
+                if (socket.readyState === 1) {
+                    if(callback !== undefined){
+                        callback();
+                    }
+                    return;
+                } else {
+                    waitForSocketConnection(socket,callback);
+                }
+            }, 5);
+          };
+           var ws = new WebSocket("ws://localhost:8888/websocket");
+
+           var itemSearch = document.getElementById('itemSearch');
+            console.log(itemSearch);
+             myscript = function(text) {
+              waitForSocketConnection(ws, function() {
+                console.log(text);
+              ws.send(text);
+                });
+             };
+             ws.onopen = function() {
+                waitForSocketConnection(ws, function() {
+                  ws.send('hello');
+                });
+             };
+             ws.onmessage = function (evt) {
+                alert(evt.data);
+             };
+
+        </script>
     <div class="having">
         <div class="pictures">
           <ul>
