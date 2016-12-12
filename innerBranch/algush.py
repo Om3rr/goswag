@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup as soup
 import networkx as nx
 import math
-import matplotlib.pyplot as plt
 class soupFacade:
     def __init__(self):
         self.factor = lambda x:math.sin(x/2)*3
