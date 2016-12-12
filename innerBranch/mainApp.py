@@ -62,6 +62,7 @@ def connect():
         db = MySQLdb.connect(host="107.191.62.204",  # your host, usually localhost
                          user="root",  # your username
                          password="20403472",  # your password
+                         passwd="20403472",  # your password
                          db="ebayset")  # name of the data base
     except Exception as e:
         print(e)
