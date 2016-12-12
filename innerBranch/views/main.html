@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel  ="stylesheet" href="{{ static_url("css/main.css") }}">
+    <link rel  ="stylesheet" href="{{ static_url("css/style.css") }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+    <meta charset="UTF-8">
+    <title>Go Swag</title>
+
+</head>
+<body class="body">
+    <div class="header">
+        <h1>GoSwag</h1>
+        <div class="headerSub">
+            <h2>Get your dreamy things in click</h2>
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="email" placeholder="email addr" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="first and last name" class="form-control" id="unameform">
+                </div>
+                <div class="btn" onclick=submitDetails()>Submit</div>
+            </form>
+        </div>
+    </div>
+    <div class="body-container" style="display:flex;">
+
+        <div class="list-group" id="categories">
+        </div>
+        <div class="pic-group" id="pictures" style="margin-top:80px;">
+            <!--8X4 on 150X150-->
+            <!--32 pictures per category!-->
+        </div>
+    </div>
+    <script src="{{static_url("mainS.js")}}"></script>
+</body>
+</html>
