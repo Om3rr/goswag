@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup as soup
 import networkx as nx
 import math
+import matplotlib.pyplot as plt
 class soupFacade:
     def __init__(self):
         self.factor = lambda x:math.sin(x/2)*3
@@ -69,24 +70,23 @@ class graphManager:
             with open('lastGraph.pickle','rb') as f:
                 self.graph = pickle.load(f)
         except Exception as e:
+            print('cant find pickle loading from db.')
             info = self.db.getAllSwaps()
             self.graph = nx.DiGraph()
             for row in info:
                 give,get = row
                 self.graph.add_edge(get,give)
 
-
     def updateGraph(self,swapItem,choices):
         self.graph.add_node(swapItem)
         for elem in choices:
-            self.graph.add_edge(swapItem,elem)
+            self.graph.add_edge(elem,swapItem)
+
 
     def performAstar(self,idFrom,idTo):
         print('performing astar')
         try:
-            score = nx.astar_path(self.graph,idTo,idFrom,self.soup.LCA)
-            print('find new...')
-            print(score)
+            score = nx.astar_path(self.graph,idFrom,idTo,self.soup.LCA)
             return score
         except nx.NetworkXNoPath as np:
             print("no results buddy")

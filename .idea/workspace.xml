@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16460502-a543-48d1-a987-495988e353bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/innerBranch/categoriesNew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algor.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clientCareClass.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ebayCollector.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scraper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/mainS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gitignore" afterPath="$PROJECT_DIR$/gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainApp.py" afterPath="$PROJECT_DIR$/mainApp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/css/main.css" afterPath="$PROJECT_DIR$/views/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main.html" afterPath="$PROJECT_DIR$/views/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/innerBranch/ancestors.pickle" afterPath="$PROJECT_DIR$/innerBranch/ancestors.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/innerBranch/lastGraph.pickle" afterPath="$PROJECT_DIR$/innerBranch/lastGraph.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/innerBranch/.idea/workspace.xml" afterPath="$PROJECT_DIR$/innerBranch/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/innerBranch/algush.py" afterPath="$PROJECT_DIR$/innerBranch/algush.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/innerBranch/clientCareClass.py" afterPath="$PROJECT_DIR$/innerBranch/clientCareClass.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/innerBranch/mainApp.py" afterPath="$PROJECT_DIR$/innerBranch/mainApp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/mainS.js" afterPath="$PROJECT_DIR$/views/mainS.js" />
     </list>
     <ignored path="AI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,8 +64,8 @@
       <file leaf-file-name="mainS.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/mainS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+            <state relative-caret-position="680">
+              <caret line="103" column="73" lean-forward="false" selection-start-line="103" selection-start-column="73" selection-end-line="103" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -354,12 +350,12 @@
       <workItem from="1481229389043" duration="1066000" />
       <workItem from="1481230529351" duration="7807000" />
       <workItem from="1481244239756" duration="2734000" />
-      <workItem from="1481323379036" duration="5293000" />
+      <workItem from="1481323379036" duration="7779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21579000" />
+    <option name="totallyTimeSpent" value="24065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -786,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/mainS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        <state relative-caret-position="680">
+          <caret line="103" column="73" lean-forward="false" selection-start-line="103" selection-start-column="73" selection-end-line="103" selection-end-column="73" />
           <folding />
         </state>
       </provider>

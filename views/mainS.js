@@ -93,13 +93,24 @@ showFindings = function(data){
         return;
     }
     head = document.createElement('h1');
-    head.innerHTML = 'Success!!!';
-    head.style = 'font-size:50px;color:white;padding:100px;';
-    body.appendChild(head);
+    body.innerHTML='';
     todolist = document.createElement('div');
+    todolist.style = 'width:100%;text-algin:center;';
+    head.innerHTML = 'Success!!!';
+    head.style = 'font-size:50px;color:white;padding:100px;text-align:center;';
+    todolist.appendChild(head);
+    mylist = document.createElement('li');
+    mylist.className = 'list-group';
+    mylist.style = 'width:500px !important;margin-left:700px!important;';
+    body.appendChild(todolist);
+    todolist.appendChild(mylist);
     for(i = 0;i<data.length;i++){
-        
+        step = document.createElement('ul');
+        step.innerHTML = 'take '+data[i][1]+' from '+data[i][2]+' and give him '+data[i][0];
+        step.className = 'list-group-item';
+        mylist.appendChild(step);
     }
+
 
 };
 
@@ -160,7 +171,7 @@ createProgressbar = function () {
 
 
 
-ws = new WebSocket("ws://localhost:8888/websocket");
+ws = new WebSocket("ws://107.191.62.204/websocket");
 categoryData = null;
 ws.onmessage = function(e) {
     console.log('Connected succesfully');

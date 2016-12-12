@@ -42,14 +42,16 @@ class userCare:
             return [0]
         elif (messageCode == 'submit'):
             import time
-            time.sleep(5)
+            time.sleep(2)
             mail,name = messageInfo.split('*')
             self.db.addSwap(self.swapItem,self.choices,mail,name)
-            self.graph.updateGraph(self.swapItem,self.choices)
+            self.graph.updateGraph(self.swapItem, self.choices)
             for choice in self.choices:
                 score = self.graph.performAstar(self.swapItem,choice)
                 if(score == None):
                     continue
+
+            if(score != None):
                 return self.db.scoreToWin(score)
             print('no findings buddy, try another thing!')
             return [-1]
@@ -96,12 +98,15 @@ class dbWrapper:
         return info
 
     def scoreToWin(self,score):
+        edges = [(score[i],score[i+1]) for i in range(len(score)-1)]
         fullList = []
         a = 'select userId from swaps where igive = %s and iget = %s'
         with self.db.cursor() as curs:
-            for elem in score:
+            print(score)
+            for elem in edges:
                 curs.execute(a %(elem[1],elem[0]))
-                fullList.append(curs.fetchone())
+                fullList.append([elem[0],elem[1],curs.fetchone()[0]])
+        print(fullList)
 
         return fullList
 

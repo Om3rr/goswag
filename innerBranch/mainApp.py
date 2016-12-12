@@ -61,7 +61,7 @@ def connect():
     try:
         db = MySQLdb.connect(host="localhost",  # your host, usually localhost
                          user="root",  # your username
-                         passwd="",  # your password
+                         passwd="20403472",  # your password
                          db="ebayset")  # name of the data base
     except Exception as e:
         print(e)
@@ -79,6 +79,8 @@ def getCat():
     a = curs.fetchall()
     return [list(x) for x in a]
 import datetime
+
+
 if __name__ == "__main__":
     if system() in ["Windows", "Darwin"]:
         port = 8888
