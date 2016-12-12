@@ -59,9 +59,9 @@ def make_app():
     return Application()
 def connect():
     try:
-        db = MySQLdb.connect(host="localhost",  # your host, usually localhost
+        db = MySQLdb.connect(host="107.191.62.204",  # your host, usually localhost
                          user="root",  # your username
-                         passwd="20403472",  # your password
+                         password="20403472",  # your password
                          db="ebayset")  # name of the data base
     except Exception as e:
         print(e)
