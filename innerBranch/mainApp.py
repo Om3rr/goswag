@@ -64,7 +64,6 @@ def connect():
                          passwd='20403472',  # your password
                          db='ebayset')  # name of the data base
     except Exception as e:
-		print('yo')
         print(e)
         exit()
     return db
