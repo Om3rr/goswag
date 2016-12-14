@@ -68,6 +68,7 @@ class dbWrapper:
             try:
                 curs.execute(a)
                 results = curs.fetchall()
+                print('fetch success')
             except Exception as e:
                 print(a)
                 return []
